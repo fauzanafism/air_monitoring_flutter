@@ -125,6 +125,7 @@ class _MainPage extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Air Monitoring'),
+        backgroundColor: Color(0xff292318),
       ),
       body: Container(
         child: ListView(
