@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:intl/intl.dart';
 
 import './DiscoveryPage.dart';
 import './SelectBondedDevicePage.dart';
@@ -21,6 +22,8 @@ class _MainPage extends State<MainPage> {
   BluetoothState _bluetoothState = BluetoothState.UNKNOWN;
 
   final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
+
+  dynamic currentTime = DateFormat.yMd().add_jm().format(DateTime.now());
 
   Position _currentPosition;
   String _currentAddress;
@@ -132,6 +135,10 @@ class _MainPage extends State<MainPage> {
           children: <Widget>[
             Divider(),
             ListTile(
+              title: const Text('Location and Time'),
+            ),
+            Divider(),
+            ListTile(
                 title: const Text('Location'),
                 subtitle: _currentPosition == null && _currentAddress == null
                     ? const Text('No position found')
@@ -139,6 +146,10 @@ class _MainPage extends State<MainPage> {
                     ", LON: ${_currentPosition.longitude}"
                     ", ALT: ${_currentPosition.altitude}"
                 )
+            ),
+            ListTile(
+              title: const Text('Time'),
+              subtitle: Text(currentTime),
             ),
             Divider(),
             ListTile(title: const Text('General')),
