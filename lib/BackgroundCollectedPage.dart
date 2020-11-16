@@ -62,6 +62,7 @@ class BackgroundCollectedPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Collected data'),
+          backgroundColor: Color(0xff292318),
           actions: <Widget>[
             // Progress circle
             (task.inProgress

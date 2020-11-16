@@ -1,12 +1,11 @@
 import 'package:air_monitoring/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
-import './MainPage.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'Splash Screen',
+    title: 'Air Monitoring',
     home: SplashScreenPage(),
   ));
 }
