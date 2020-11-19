@@ -110,11 +110,13 @@ class _ChatPage extends State<ChatPage> {
 
     return Scaffold(
       appBar: AppBar(
-          title: (isConnecting
-              ? Text('Connecting chat to ' + widget.server.name + '...')
-              : isConnected
-                  ? Text('Live chat with ' + widget.server.name)
-                  : Text('Chat log with ' + widget.server.name))),
+        title: (isConnecting
+            ? Text('Connecting chat to ' + widget.server.name + '...')
+            : isConnected
+                ? Text('Receiving data from ' + widget.server.name)
+                : Text('Chat log with ' + widget.server.name)),
+        backgroundColor: Color(0xff292318),
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[

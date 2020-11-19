@@ -120,6 +120,7 @@ class _SelectBondedDevicePage extends State<SelectBondedDevicePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Select device'),
+        backgroundColor: Color(0xff292318),
         actions: <Widget>[
           _isDiscovering
               ? FittedBox(
