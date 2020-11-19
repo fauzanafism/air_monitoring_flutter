@@ -190,17 +190,12 @@ class _MainPage extends State<MainPage> {
                   ? const Text("Discoverable")
                   : Text(
                   "Discoverable for ${_discoverableTimeoutSecondsLeft}s"),
-              subtitle: const Text("PsychoX-Luna"),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Checkbox(
                     value: _discoverableTimeoutSecondsLeft != 0,
                     onChanged: null,
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.edit),
-                    onPressed: null,
                   ),
                   IconButton(
                     icon: const Icon(Icons.refresh),
