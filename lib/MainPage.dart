@@ -128,11 +128,9 @@ class _MainPage extends State<MainPage> {
       body: Container(
         child: ListView(
           children: <Widget>[
-            Divider(),
             ListTile(
               title: const Text('Location and Time'),
             ),
-            Divider(),
             ListTile(
                 title: const Text('Location'),
                 subtitle: _currentPosition == null && _currentAddress == null
